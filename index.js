@@ -4,7 +4,7 @@ const app = require('./app');
 // MongoDb Compas: mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat 
 // MongoDb url online: mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat/?retryWrites=true&w=majority           
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/meed', { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
+mongoose.connect('mongodb+srv://Grupo4:Grupo4@cluster0.tm8stud.mongodb.net/Med&Chat?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
     console.log("Se encuentra conectado a la base de datos.");
     const PORT = process.env.PORT || 3000;
 
