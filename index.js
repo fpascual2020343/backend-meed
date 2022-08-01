@@ -6,8 +6,9 @@ const app = require('./app');
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/meed', { useNewUrlParser: true, useUnifiedTopology: true }).then(()=>{
     console.log("Se encuentra conectado a la base de datos.");
+    const PORT = process.env.PORT || 3000;
 
-    app.listen(3000, function () {
+    app.listen(PORT, function () {
         console.log("Esta corriendo en el puerto 3000!")
         usuarioControlador.UsuarioDefault();      
     })
